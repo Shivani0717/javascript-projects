@@ -1,0 +1,228 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background: linear-gradient(to right bottom,#f50388,#f87979);
+}
+
+#main{
+    min-height: 100vh;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+#addBtn{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: rgb(0, 0, 0);
+    background-color: #09c602;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#addBtn:hover{
+    background-color: #0aef06;
+}
+
+.note{
+    
+    background-color: #393e46;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+
+}
+
+.note:hover{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tool{
+    background-color: #222831;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.tool i{
+
+    padding: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.tool i:hover{
+    color: #aca1a1;
+}
+
+.note textarea {
+    width: 300px;
+    border: none;
+    min-height: 220px;
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    background: transparent;
+}
+
+.note textarea:focus {
+    outline: none;
+}
+
+
+/* Animated gradient background */
+@keyframes animatedGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+body {
+    background: linear-gradient(-45deg, #74ebd5, #ACB6E5, #f6d365, #fda085);
+    background-size: 400% 400%;
+    animation: animatedGradient 15s ease infinite;
+}
+
+/* Improved Add Button */
+#addBtn {
+    background-color: #6a0dad;
+    color: #ffffff;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+#addBtn:hover {
+    background-color: #8a2be2;
+    transform: scale(1.05);
+}
+
+/* Enhanced Note Styling */
+.note {
+    background-color: #ffffff;
+    color: #333;
+    transform: scale(0.95);
+    animation: fadeInNote 0.4s ease forwards;
+}
+
+@keyframes fadeInNote {
+    from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Updated Tool Bar */
+.tool {
+    background-color: #6a0dad;
+    color: white;
+}
+
+/* Note Textarea Improvements */
+.note textarea {
+    background-color: #f7f7f7;
+    color: #333;
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background: linear-gradient(-45deg, #232526, #414345, #000000, #434343);
+    background-size: 400% 400%;
+    animation: animatedGradient 15s ease infinite;
+    color: #f1f1f1;
+}
+
+body.dark-mode #addBtn {
+    background-color: #1e1e2f;
+    color: #ffffff;
+}
+
+body.dark-mode #addBtn:hover {
+    background-color: #33334d;
+}
+
+body.dark-mode .note {
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+}
+
+body.dark-mode .note textarea {
+    background-color: #1f1f1f;
+    color: #f1f1f1;
+}
+
+body.dark-mode .tool {
+    background-color: #1e1e2f;
+    color: #f1f1f1;
+}
+
+/* Toggle switch */
+.switch {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #333;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
